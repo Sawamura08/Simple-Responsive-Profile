@@ -1,0 +1,623 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Work+Sans:wght@300;400&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	font-family: "Work Sans", sans-serif;
+	background-color: var(--PRIMARY-COLOR);
+}
+
+/* Variables */
+:root {
+	--PRIMARY-COLOR: #f5ebe0;
+	--WHITE-COLOR: #ffffff;
+	--HEADER-COLOR: #8c7b80;
+	--FONT-COLOR: #b4a9ac;
+	--HEADER-FW: 400;
+	--FW: 300;
+}
+
+.container {
+	width: 100%;
+	min-height: 100vh;
+	padding: 1rem 1rem 2rem 1rem;
+	border-bottom: 1px solid var(--FONT-COLOR);
+}
+
+/* Header */
+
+.header {
+	display: flex;
+	flex-direction: column;
+	width: inherit;
+	text-align: center;
+}
+
+.profile-pic {
+	width: 70%;
+	margin: 1.5rem 0 2rem 0;
+	border-radius: 50%;
+	border: solid 0.7rem var(--WHITE-COLOR);
+	opacity: 0;
+	position: relative;
+}
+
+.header-description {
+	opacity: 0;
+	position: relative;
+}
+
+.header-description h3 {
+	font-size: 3rem;
+	font-weight: var(--HEADER-COLORFW);
+	color: var(--HEADER-COLOR);
+	margin-bottom: 1rem;
+}
+
+.header-description p {
+	font-size: 1rem;
+	font-weight: var(--HEADER-FW);
+	line-height: 2;
+	color: var(--FONT-COLOR);
+}
+
+/* hobbies */
+
+.hobbies-section {
+	display: flex;
+	flex-direction: column;
+	width: inherit;
+	text-align: center;
+}
+
+.hobbies-image .hobby-img {
+	width: 90%;
+	margin: 1.5rem 0 2rem 0;
+	border: solid 0.7rem var(--WHITE-COLOR);
+	opacity: 0;
+	position: relative;
+}
+
+.hobbies-description {
+	opacity: 0;
+	position: relative;
+}
+
+.hobbies-description h3 {
+	font-size: 2.3rem;
+	font-weight: var(--HEADER-COLORFW);
+	color: var(--HEADER-COLOR);
+	margin-bottom: 1rem;
+}
+
+.hobbies-description p {
+	font-size: 1rem;
+	font-weight: var(--HEADER-FW);
+	line-height: 2;
+	color: var(--FONT-COLOR);
+}
+
+/* Favorite */
+
+.favorite-section {
+	display: flex;
+	flex-direction: column;
+	width: inherit;
+	text-align: center;
+}
+
+.favorite-image .favorite-img {
+	width: 90%;
+	margin: 1.5rem 0 2rem 0;
+	border: solid 0.7rem var(--WHITE-COLOR);
+	opacity: 0;
+	position: relative;
+}
+
+.favorite-description {
+	opacity: 0;
+	position: relative;
+}
+
+.favorite-description h3 {
+	font-size: 2.3rem;
+	font-weight: var(--HEADER-COLORFW);
+	color: var(--HEADER-COLOR);
+	margin-bottom: 1rem;
+}
+
+.favorite-description p {
+	font-size: 1rem;
+	font-weight: var(--HEADER-FW);
+	line-height: 2;
+	color: var(--FONT-COLOR);
+}
+
+/* Contact */
+
+.contact-section {
+	display: flex;
+	flex-direction: column;
+	width: inherit;
+	text-align: center;
+}
+
+.contact-image .contact-img {
+	width: 90%;
+	margin: 1.5rem 0 2rem 0;
+	border: solid 0.7rem var(--WHITE-COLOR);
+	opacity: 0;
+	position: relative;
+}
+
+.contact-description {
+	text-align: center;
+	opacity: 0;
+	position: relative;
+}
+
+.contact-description h3 {
+	font-size: 2.3rem;
+	font-weight: var(--HEADER-COLORFW);
+	color: var(--HEADER-COLOR);
+	margin-bottom: 1rem;
+}
+
+.contact-description p {
+	font-size: 1rem;
+	font-weight: var(--HEADER-FW);
+	line-height: 2;
+	color: var(--FONT-COLOR);
+}
+
+.socials {
+	display: flex;
+	width: 100%;
+	margin: 1rem 0;
+	justify-content: space-between;
+}
+
+.socials a {
+	border-radius: 100%;
+	border: solid 1px var(--FONT-COLOR);
+	padding: 0.7rem;
+	transition: transform 0.5s ease-in-out;
+	opacity: 0;
+	position: relative;
+}
+
+.socials a:is(:hover, :active) {
+	transform: scale(1.2);
+}
+
+.socials img {
+	width: 1.5rem;
+}
+
+/* Phones */
+@media all and (width > 370px) and (height > 800px) and (orientation: portrait) {
+	.container {
+		padding: 1rem 1rem 5rem 1rem;
+		min-height: max-content;
+	}
+
+	.container:first-child {
+		padding: 1rem;
+		min-height: 100vh;
+	}
+
+	.header {
+		margin-top: 10rem;
+	}
+
+	.header .profile-pic {
+		width: 50%;
+	}
+
+	.hobbies-image .hobby-img,
+	.favorite-image .favorite-img,
+	.contact-image .contact-img {
+		width: 70%;
+	}
+
+	.socials {
+		width: 70%;
+		margin: 1rem auto;
+	}
+}
+
+/* Tablets, Ipads */
+
+@media all and (width >= 600px) and (height >= 1000px) and (orientation: portrait) {
+	.header {
+		display: flex;
+		flex-direction: row;
+		margin-top: 22rem;
+	}
+
+	.header-description {
+		order: -1;
+		margin-top: 3rem;
+		margin-left: 3rem;
+		text-align: start;
+	}
+
+	.header-description h3 {
+		font-size: 3.5rem;
+	}
+
+	.header-description .arrow-down {
+		width: 3rem;
+		margin-top: 2rem;
+		border-radius: 50%;
+		padding: 0.5rem;
+		border: solid 1px var(--FONT-COLOR);
+		cursor: pointer;
+		transition: transform 0.4s ease-in-out;
+	}
+
+	.header-description .arrow-down:is(:hover, :active) {
+		transform: scale(1.2);
+	}
+
+	.header-image .profile-pic {
+		width: 65%;
+	}
+
+	.hobbies-section {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.hobbies-description {
+		margin: 10rem 0 0 4rem;
+		text-align: start;
+	}
+
+	.hobbies-description p {
+		font-size: 0.8rem;
+	}
+
+	.hobbies-description .arrow-down {
+		width: 3rem;
+		margin-top: 2rem;
+		border-radius: 50%;
+		padding: 0.5rem;
+		border: solid 1px var(--FONT-COLOR);
+		cursor: pointer;
+		transition: transform 0.4s ease-in-out;
+	}
+
+	.hobbies-description .arrow-down:is(:hover, :active) {
+		transform: scale(1.2);
+	}
+
+	.hobbies-image .hobby-img {
+		margin-left: 3rem;
+		width: 22rem;
+		height: 27rem;
+	}
+
+	.favorite-section {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.favorite-description {
+		margin: 10rem 2rem 0 2rem;
+		text-align: start;
+		order: -1;
+	}
+
+	.favorite-description .arrow-down {
+		width: 3rem;
+		margin-top: 2rem;
+		border-radius: 50%;
+		padding: 0.5rem;
+		border: solid 1px var(--FONT-COLOR);
+		cursor: pointer;
+		transition: transform 0.4s ease-in-out;
+	}
+
+	.favorite-description .arrow-down:is(:hover, :active) {
+		transform: scale(1.2);
+	}
+
+	.favorite-description p {
+		font-size: 0.8rem;
+	}
+
+	.favorite-image .favorite-img {
+		margin-right: 3rem;
+		width: 22rem;
+		height: 27rem;
+	}
+
+	.contact-section {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.contact-description {
+		margin: 10rem 1rem 0 2rem;
+		text-align: start;
+	}
+
+	.contact-description p {
+		font-size: 0.8rem;
+	}
+
+	.contact-description .arrow-down {
+		width: 3rem;
+		margin: 2rem 0 0 auto;
+		border-radius: 50%;
+		padding: 0.5rem;
+		border: solid 1px var(--FONT-COLOR);
+		cursor: pointer;
+		transition: transform 0.5s ease-in-out;
+	}
+
+	.contact-description .arrow-down:is(:hover, :active) {
+		transform: scale(1.2);
+	}
+
+	.contact-image .contact-img {
+		margin-left: 3rem;
+		width: 22rem;
+		height: 27rem;
+	}
+
+	.socials {
+		width: 70%;
+		justify-content: space-evenly;
+	}
+}
+
+@media all and (width >= 1000px) and (height >= 600px) and (orientation: landscape) {
+	.header {
+		display: flex;
+		flex-direction: row;
+		margin: 5rem auto;
+		width: 70%;
+	}
+
+	.header-description {
+		order: -1;
+		margin: auto 2rem auto 2rem;
+		text-align: start;
+	}
+
+	.header-description h3 {
+		font-size: 4.1rem;
+	}
+
+	.header-description p {
+		font-size: 1rem;
+	}
+
+	.header-description .arrow-down {
+		width: 3rem;
+		margin-top: 2rem;
+		border-radius: 50%;
+		padding: 0.5rem;
+		border: solid 1px var(--FONT-COLOR);
+		cursor: pointer;
+	}
+
+	.header-image .profile-pic {
+		margin-right: auto;
+		width: 80%;
+	}
+
+	.hobbies-section {
+		display: flex;
+		flex-direction: row;
+		margin: 3rem 0;
+		width: 100%;
+	}
+
+	.hobbies-description {
+		margin: 10rem auto 0 auto;
+		width: 40%;
+		text-align: start;
+	}
+
+	.hobbies-description .arrow-down {
+		width: 3rem;
+		margin-top: 2rem;
+		border-radius: 50%;
+		padding: 0.5rem;
+		border: solid 1px var(--FONT-COLOR);
+		cursor: pointer;
+	}
+
+	.hobbies-description p {
+		font-size: 1rem;
+	}
+
+	.hobbies-description h3 {
+		font-size: 2.8rem;
+	}
+
+	.hobbies-image .hobby-img {
+		margin-left: 3rem;
+		width: 25rem;
+		height: 30rem;
+	}
+
+	.favorite-section {
+		display: flex;
+		flex-direction: row;
+		margin: 3rem 0;
+		width: 100%;
+	}
+
+	.favorite-description {
+		margin: 10rem auto 0 auto;
+		width: 40%;
+		text-align: start;
+		order: -1;
+	}
+
+	.favorite-description .arrow-down {
+		width: 3rem;
+		margin-top: 2rem;
+		border-radius: 50%;
+		padding: 0.5rem;
+		border: solid 1px var(--FONT-COLOR);
+		cursor: pointer;
+	}
+
+	.favorite-description p {
+		font-size: 1rem;
+	}
+
+	.favorite-description h3 {
+		font-size: 2.8rem;
+	}
+
+	.favorite-image .favorite-img {
+		margin-right: 3rem;
+		width: 25rem;
+		height: 30rem;
+	}
+
+	.contact-section {
+		display: flex;
+		flex-direction: row;
+		margin: 3rem 0;
+		width: 100%;
+	}
+
+	.contact-description {
+		margin: 10rem auto 0 auto;
+		width: 40%;
+		text-align: start;
+	}
+
+	.contact-description .arrow-down {
+		width: 3rem;
+		margin-top: 2rem;
+		border-radius: 50%;
+		padding: 0.5rem;
+		border: solid 1px var(--FONT-COLOR);
+		cursor: pointer;
+	}
+
+	.contact-description p {
+		font-size: 1rem;
+	}
+
+	.contact-description h3 {
+		font-size: 2.8rem;
+	}
+
+	.contact-description .arrow-down {
+		width: 3rem;
+		margin: 2rem 0 0 auto;
+		border-radius: 50%;
+		padding: 0.5rem;
+		border: solid 1px var(--FONT-COLOR);
+		cursor: pointer;
+		transition: transform 0.5s ease-in-out;
+	}
+
+	.contact-description .arrow-down:is(:hover, :active) {
+		transform: scale(1.2);
+	}
+
+	.contact-image .contact-img {
+		margin-left: 3rem;
+		width: 25rem;
+		height: 30rem;
+	}
+
+	.socials {
+		width: 100%;
+		justify-content: space-evenly;
+	}
+}
+
+@media all and (width >= 1200px) and (orientation: landscape) {
+	.container {
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	.header {
+		width: 100%;
+	}
+
+	.hobbies-image .hobby-img {
+		width: 28rem;
+		height: 35rem;
+	}
+
+	.hobbies-description {
+		margin: 12rem 0 0 4rem;
+	}
+
+	.favorite-image .favorite-img {
+		width: 28rem;
+		height: 35rem;
+	}
+
+	.favorite-description {
+		margin: 12rem 4rem 0 0;
+	}
+
+	.contact-image .contact-img {
+		width: 28rem;
+		height: 35rem;
+	}
+
+	.contact-description {
+		margin: 12rem 0 0 4rem;
+	}
+
+	.socials {
+		text-align: start;
+	}
+}
+
+@keyframes pic-anim {
+	from {
+		opacity: 0;
+		left: -10rem;
+	}
+
+	to {
+		opacity: 1;
+		left: 0;
+	}
+}
+
+@keyframes description-anim {
+	from {
+		opacity: 0;
+		right: -10rem;
+	}
+	to {
+		opacity: 1;
+		right: 0;
+	}
+}
+
+@keyframes socials-anim {
+	from {
+		opacity: 0;
+		left: -5rem;
+	}
+
+	to {
+		opacity: 1;
+		left: 0;
+	}
+}
